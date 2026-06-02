@@ -1,0 +1,12 @@
+/* styling h1 tag */
+h1{
+    background-color: yellow;
+    padding: 20px;
+    text-align: center;
+}
+/* adding styles to paragraph element */
+p{
+    background-color: pink;
+    margin:auto;
+    padding: auto;
+}
