@@ -1,0 +1,21 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+#mainHeader{
+    font-size: x-large;
+    text-align: center;
+    background-color: aqua;
+    padding: 50px;
+}
+h2 {
+    text-align: center;
+}
+.container{
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    display: block;
+    background-color: aliceblue;
+    border:2px solid pink
+}

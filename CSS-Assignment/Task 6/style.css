@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+nav a{
+    text-decoration: none;
+    background-color: yellow;
+    padding: 10px;
+}
+a:hover{
+    scale: 2;
+}
+a:focus{
+    background-color: pink;
+}
+li{
+    list-style-type: circle;
+    list-style-position: outside;
+}
