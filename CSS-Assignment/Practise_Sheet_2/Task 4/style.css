@@ -1,0 +1,26 @@
+div{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+}
+aside{
+    margin: 20px;
+}
+ul{
+    list-style-type: none;
+    width: 200px;
+}
+ul li:nth-child(even){
+    background-color: #aaaaaaad;
+}
+ul li{
+    padding: 10px;
+}
+
+@media (max-width: 786px) {
+    aside{
+        display: none;
+    }
+}

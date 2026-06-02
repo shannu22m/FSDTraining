@@ -1,0 +1,18 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: pink;
+    gap: 10px;
+}
+nav a{
+    text-decoration: none;
+    padding: 20px;
+    background-color: yellow;
+    margin:auto;
+}
+@media (max-width:786px) {
+    nav{
+        flex-direction: column;
+    }
+}

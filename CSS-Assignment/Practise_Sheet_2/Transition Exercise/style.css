@@ -1,0 +1,51 @@
+
+.animatedbtn{
+    background-color: pink;
+}
+.animatedbtn:hover{
+    background-color: rgb(201, 139, 150);
+    scale: 1.1;
+}
+.card{  
+    margin: 20px;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(228, 198, 161);
+    transition-property: width, height;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+    
+}
+.card:hover{
+    width: 250px;
+    height: 250px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    transition: all 0.5s ease-in-out;
+}
+img:hover{
+    scale: 1.2;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav a{
+    background-color: antiquewhite;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    background-color: rgb(230, 181, 118);
+    scale: 1.2;
+    text-decoration: underline;
+}

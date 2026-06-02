@@ -1,0 +1,24 @@
+.gallery{
+    display: grid;
+    gap: 10px;
+}
+.gallery img{
+    width: 150px;
+    height: 150px;
+}
+
+@media (min-width: 800px) {
+    .gallery{
+        grid-template-columns: 150px 150px 150px 150px;
+    }
+}
+@media (min-width:500px) and (max-width: 799px) {
+    .gallery{
+        grid-template-columns: 150px 150px;
+    }
+}
+@media (max-width: 499px) {
+    .gallery{
+        grid-template-columns: 150px;
+    }
+}

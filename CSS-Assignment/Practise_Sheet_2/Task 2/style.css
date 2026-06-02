@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+@media (max-width:786px) {
+    .container{
+        flex-direction: column;
+    }
+}

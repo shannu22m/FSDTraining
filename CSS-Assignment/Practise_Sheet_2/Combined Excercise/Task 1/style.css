@@ -1,0 +1,41 @@
+body {
+  display: flex;             
+  justify-content: center;   
+  align-items: center;      
+  flex-direction: column;
+}
+form{
+    display: flex;
+    height: 400px;
+    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+label{
+    display: block;
+}
+input{
+    width: 80%;
+    box-sizing:content-box;
+}
+button{
+    margin-top: 20px;
+}
+@media (max-width:500px) {
+    form{
+        width: 60vw;
+        height:80vh;
+    }
+}
+
+button:hover{
+    background-color: rgb(114, 233, 223);
+    color: black;
+    border: 2px solid black;
+  
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;   
+}
