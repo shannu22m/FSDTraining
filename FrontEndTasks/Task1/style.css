@@ -1,0 +1,26 @@
+body {
+            background: linear-gradient(180deg, #fff8e1 0%, #fff3cd 100%);
+            color: #3d3d3d;
+        }
+        .navbar, .footer-bg {
+            background: #ffb300 !important;
+        }
+        .bg-orange {
+            background-color: #ff9800 !important;
+        }
+        .bg-soft-warning {
+            background-color: #fff3cd !important;
+        }
+        .nav-link:hover {
+            background: rgba(255, 152, 0, 0.18);
+            border-radius: 0.5rem;
+        }
+        .card {
+            border-color: #ffb300;
+        }
+        .card-img-top {
+            object-fit: cover;
+        }
+        .footer-bg {
+            color: #2f2f2f;
+        }

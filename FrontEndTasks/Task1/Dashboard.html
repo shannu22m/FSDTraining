@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg shadow-lg">
+            <div class="container justify-content-evenly d-flex align-items-center py-2">
+                <img class="rounded shadow-lg border border-warning" src="./image1.png" alt="Image" width="80"
+                    height="80">
+                <a href="#" class="nav-link fw-bold fs-3 text-dark">CVR COLLEGE OF ENGINEERING</a>
+                <a href="home.html" class="nav-link text-dark fw-semibold px-4 py-3 fs-5">Home</a>
+                <a href="about.html" class="nav-link text-dark fw-semibold px-4 py-3 fs-5">About</a>
+                <div class="nav-item dropdown">
+                    <a href="courses.html" class="nav-link dropdown-toggle text-dark fw-semibold px-4 py-3 fs-5"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Course
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="course1.html">CSE</a></li>
+                        <li><a class="dropdown-item" href="course2.html">CSE(AI&ML)</a></li>
+                    </ul>
+                </div>
+                <a href="contact.html" class="nav-link text-dark fw-semibold px-4 py-3 fs-5">Contact</a>
+                <button type="button" class="btn btn-outline-warning shadow-lg text-dark">Login</button>
+                <button type="button" class="btn btn-warning shadow-lg text-dark">Register</button>
+            </div>
+        </nav>
+    </header>
+    <div class="cotainer-fluid mt-5">
+        <div class="card bg-warning text-dark">
+            <div class="card-header text-center" >
+                <h4>Welcome To Dashboard</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row mb-5">
+            <div class="col-md-3 mb-3">
+                <div class="card bg-orange text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Students</h5>
+                        <p class="card-text display-6">3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card bg-warning text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Present Students</h5>
+                        <p class="card-text display-6">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-white bg-orange text-dark" >
+                    <div class="card-body">
+                        <h5 class="card-title">Absent Students</h5>
+                        <p class="card-text display-6">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-white bg-warning text-dark" >
+                    <div class="card-body">
+                        <h5 class="card-title">Placements</h5>
+                        <p class="card-text display-6">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shanmukha</td>
+                    <td>CSE</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="attendance1" id="present1" autocomplete="off">
+                            <label class="btn btn-outline-success" for="present1">Present</label>
+                            <input type="radio" class="btn-check" name="attendance1" id="absent1" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="absent1">Absent</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Rohith</td>
+                    <td>CSE</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="attendance2" id="present2" autocomplete="off">
+                            <label class="btn btn-outline-success" for="present2">Present</label>
+                            <input type="radio" class="btn-check" name="attendance2" id="absent2" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="absent2">Absent</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Vishnu</td>
+                    <td>CSE</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="attendance3" id="present3" autocomplete="off">
+                            <label class="btn btn-outline-success" for="present3">Present</label>
+                            <input type="radio" class="btn-check" name="attendance3" id="absent3" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="absent3">Absent</label>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
