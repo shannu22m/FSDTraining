@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="portfolio-body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-5 text-center text-lg-start">
+                    <div class="profile-card mx-auto mx-lg-0 mb-4">
+                        <img src="./image.png" alt="Profile Photo"
+                            class="rounded-circle img-fluid profile-photo shadow-sm">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="hero-copy p-4 shadow-sm rounded-4 bg-white bg-opacity-90">
+                        <p class="text-muted mb-2">Hello, I am</p>
+                        <h1 class="display-5 fw-bold">Mandapalli Shanmukha Sai Srinivas</h1>
+                        <p class="text-primary mb-3 fs-5">Front-end Developer | UI/UX Enthusiast</p>
+                        <p class="mb-4">I build polished, responsive websites and modern web experiences using HTML,
+                            CSS, Bootstrap, and JavaScript. I enjoy turning strong ideas into clean, usable digital
+                            products.</p>
+                        <div class="d-flex flex-column flex-sm-row gap-3">
+                            <a class="btn btn-primary btn-lg" href="#resumeModal" data-bs-toggle="modal">Download
+                                Resume</a>
+                            <a class="btn btn-outline-primary btn-lg" href="#projects">View Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-5 section-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>About Me</h2>
+                <p class="text-muted">Professional background, education, and personal interests.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Education</h5>
+                            <p class="card-text">B. Tech in Computer Science and Engineering(Artficial Intelligence and Machine Learning) from CVR College Of Engineering. Focused on web
+                                development, design systems, and interactive UI creation.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li><strong>2023 - 2027</strong> Computer Science and Engineering (Artificial
+                                    Intelligence and Machine Learning)</li>
+                                <li><strong>2020 - 2022</strong> Intermediate</li>
+                                <li><strong>2019 - 2020</strong> Secondary School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Career Objective</h5>
+                            <p class="card-text">To grow as a web developer in a collaborative team, delivering refined
+                                interfaces and intuitive user experiences. I enjoy using modern front-end technologies
+                                and Bootstrap to create accessible digital products.</p>
+                            <p>
+                                <a class="btn btn-sm btn-soft-primary" data-bs-toggle="collapse" href="#careerObjective"
+                                    role="button" aria-expanded="false" aria-controls="careerObjective">Read more</a>
+                            </p>
+                            <div class="collapse" id="careerObjective">
+                                <p class="mt-3 text-muted">I aim to work on projects that combine elegant design with
+                                    strong performance, while learning new frameworks and enhancing my JavaScript and
+                                    CSS skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Interests</h5>
+                            <p class="card-text">When I am not coding, I enjoy photography, reading design blogs, and
+                                exploring UI animations.</p>
+                            <div class="badge bg-light text-dark me-1 mb-1">Photography</div>
+                            <div class="badge bg-light text-dark me-1 mb-1">Travel</div>
+                            <div class="badge bg-light text-dark me-1 mb-1">Design Systems</div>
+                            <div class="badge bg-light text-dark me-1 mb-1">Learning CSS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Skills</h2>
+                <p class="text-muted">Technical skills displayed with progress bars and skill cards.</p>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0 p-4 h-100">
+                        <h5 class="mb-4">Primary Skills</h5>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-1"><span>HTML</span><span>90%</span></div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;"
+                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-1"><span>CSS</span><span>85%</span></div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 85%;"
+                                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-1"><span>Bootstrap</span><span>80%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-1"><span>JavaScript</span><span>75%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;"
+                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card skill-card shadow-sm border-0 h-100">
+                                <div class="card-body text-center">
+                                    <h6 class="fw-bold">Responsive Design</h6>
+                                    <p class="text-muted small">Creating layouts that work well on screens of all sizes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card skill-card shadow-sm border-0 h-100">
+                                <div class="card-body text-center">
+                                    <h6 class="fw-bold">Web Animations</h6>
+                                    <p class="text-muted small">Polished transitions using CSS and Bootstrap utilities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card skill-card shadow-sm border-0 h-100">
+                                <div class="card-body text-center">
+                                    <h6 class="fw-bold">Version Control</h6>
+                                    <p class="text-muted small">Git workflow for clean development and collaboration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card skill-card shadow-sm border-0 h-100">
+                                <div class="card-body text-center">
+                                    <h6 class="fw-bold">UI Prototyping</h6>
+                                    <p class="text-muted small">Designing mockups before coding for stronger UX.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 section-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Projects</h2>
+                <p class="text-muted">A selection of real projects with technologies and GitHub references.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-3">
+                    <div class="card project-card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Landing Page</h5>
+                            <p class="card-text">A clean landing page for a design studio with smooth scroll sections
+                                and responsive layout.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3"><span class="badge bg-primary me-1">HTML</span><span
+                                        class="badge bg-secondary me-1">CSS</span><span
+                                        class="badge bg-info text-dark">Bootstrap</span></div>
+                                <a href="https://github.com/" target="_blank"
+                                    class="btn btn-outline-primary btn-sm">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card project-card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Task Manager</h5>
+                            <p class="card-text">A JavaScript task tracker with add/remove tasks, priority labels, and
+                                local storage persistence.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3"><span class="badge bg-primary me-1">JavaScript</span><span
+                                        class="badge bg-secondary me-1">HTML</span><span
+                                        class="badge bg-info text-dark">CSS</span></div>
+                                <a href="https://github.com/" target="_blank"
+                                    class="btn btn-outline-primary btn-sm">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card project-card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Portfolio UI</h5>
+                            <p class="card-text">A modern portfolio interface featuring cards, modals, and animated
+                                skill indicators.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3"><span class="badge bg-primary me-1">Bootstrap</span><span
+                                        class="badge bg-secondary me-1">CSS</span><span
+                                        class="badge bg-info text-dark">UI/UX</span></div>
+                                <a href="https://github.com/" target="_blank"
+                                    class="btn btn-outline-primary btn-sm">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card project-card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">E-commerce Demo</h5>
+                            <p class="card-text">A product showcase with responsive cards, filters, and add-to-cart
+                                interactions.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3"><span class="badge bg-primary me-1">HTML</span><span
+                                        class="badge bg-secondary me-1">JavaScript</span><span
+                                        class="badge bg-info text-dark">CSS</span></div>
+                                <a href="https://github.com/" target="_blank"
+                                    class="btn btn-outline-primary btn-sm">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Achievements</h2>
+                <p class="text-muted">Certifications, workshops, internships, and awards presented in an interactive
+                    layout.</p>
+            </div>
+            <div class="accordion" id="achievementAccordion">
+                <div class="accordion-item shadow-sm rounded-4 mb-3 border-0">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#certifications" aria-expanded="false" aria-controls="certifications">
+                            Certifications
+                        </button>
+                    </h2>
+                    <div id="certifications" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#achievementAccordion">
+                        <div class="accordion-body bg-white rounded-bottom p-4">
+                            <ul class="mb-0">
+                                <li><strong>Responsive Web Design</strong> - FreeCodeCamp</li>
+                                <li><strong>Bootstrap Essentials</strong> - Online Training</li>
+                                <li><strong>JavaScript Fundamentals</strong> - Skillshare</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm rounded-4 mb-3 border-0">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#workshops" aria-expanded="false" aria-controls="workshops">
+                            Workshops
+                        </button>
+                    </h2>
+                    <div id="workshops" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#achievementAccordion">
+                        <div class="accordion-body bg-white rounded-bottom p-4">
+                            <ul class="mb-0">
+                                <li>UI/UX Design Sprint</li>
+                                <li>Modern CSS & Animations</li>
+                                <li>Front-end Development Bootcamp</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm rounded-4 mb-3 border-0">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#internships" aria-expanded="false" aria-controls="internships">
+                            Internships
+                        </button>
+                    </h2>
+                    <div id="internships" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#achievementAccordion">
+                        <div class="accordion-body bg-white rounded-bottom p-4">
+                            <ul class="mb-0">
+                                <li>Front-end Intern at Creative Labs</li>
+                                <li>UI Intern at WebWorks Studio</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm rounded-4 border-0">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#awards" aria-expanded="false" aria-controls="awards">
+                            Awards
+                        </button>
+                    </h2>
+                    <div id="awards" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#achievementAccordion">
+                        <div class="accordion-body bg-white rounded-bottom p-4">
+                            <ul class="mb-0">
+                                <li>Best Student Web Project 2023</li>
+                                <li>Creative Design Award</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 section-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Contact</h2>
+                <p class="text-muted">Send a message and let’s discuss your next project.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="you@example.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject"
+                                            placeholder="Project or Inquiry" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Tell me more"
+                                            required></textarea>
+                                    </div>
+                                    <div class="col-12 text-center mt-3">
+                                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="formMessage" class="mt-4 alert alert-success d-none" role="alert">Thank you! Your
+                                message has been recorded.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center text-muted">
+        <div class="container">
+            <p class="mb-0">Designed with Bootstrap · Clean UI · Modern Portfolio Showcase</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-sm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resumeModalLabel">Download Resume</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for your interest! Click below to download a clean resume version.</p>
+                    <ul>
+                        <li><strong>Name:</strong> Aman Kumar</li>
+                        <li><strong>Role:</strong> Front-end Developer</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary">Download PDF</a>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

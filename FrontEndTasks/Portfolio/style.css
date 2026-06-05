@@ -1,0 +1,131 @@
+:root {
+    color-scheme: light;
+    --bg-base: #f3f7fb;
+    --surface: #ffffff;
+    --surface-soft: #f8fbff;
+    --text-muted: #6c757d;
+}
+
+body.portfolio-body {
+    background: radial-gradient(circle at top, rgba(13, 110, 253, 0.09), transparent 36%),
+                linear-gradient(180deg, #f8fbff 0%, #eff4fb 100%);
+    color: #212529;
+}
+
+.hero-section {
+    min-height: 75vh;
+}
+
+.profile-photo {
+    max-width: 260px;
+    border: 7px solid rgba(255, 255, 255, 0.98);
+}
+
+.profile-card {
+    display: inline-block;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 2rem;
+}
+
+.hero-copy {
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(13, 110, 253, 0.08);
+}
+
+.section-bg {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.section-title h2 {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.section-title p {
+    max-width: 640px;
+    margin: 0 auto;
+    color: var(--text-muted);
+}
+
+.card {
+    background: var(--surface);
+    border: none;
+    border-radius: 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.skill-progress {
+    height: 14px;
+    border-radius: 12px;
+}
+
+.project-card, .skill-card {
+    transition: transform 0.3s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover, .skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 45px rgba(15, 23, 42, 0.12);
+}
+
+.project-card .badge, .skill-card .badge {
+    opacity: 0.9;
+}
+
+.btn-soft-primary {
+    color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.12);
+    border: 1px solid rgba(13, 110, 253, 0.18);
+    border-radius: 1rem;
+}
+
+.btn-soft-primary:hover {
+    background-color: rgba(13, 110, 253, 0.17);
+}
+
+.btn-primary {
+    box-shadow: 0 12px 25px rgba(13, 110, 253, 0.18);
+}
+
+.form-control,
+.form-control:focus {
+    border-radius: 0.9rem;
+    box-shadow: none;
+    border: 1px solid rgba(13, 110, 253, 0.18);
+}
+
+textarea.form-control {
+    min-height: 150px;
+}
+
+.accordion-button {
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(13, 110, 253, 0.08);
+}
+
+.accordion-item {
+    background: rgba(248, 251, 255, 0.95);
+    border-radius: 1.25rem;
+    border: none;
+}
+
+footer {
+    background: transparent;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 3rem;
+    }
+    .profile-card {
+        padding: 1rem;
+    }
+}
