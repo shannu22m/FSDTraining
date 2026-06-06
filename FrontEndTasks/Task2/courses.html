@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Tech Institute - Courses</title>
+    <meta name="description" content="View all available courses at Apex Tech Institute, including Web Dev, Python, Data Science, AI & ML, Java, and Cloud Computing.">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/logo.png" alt="Apex Tech Institute Logo" height="40" class="me-2 rounded">
+                <span class="text-primary-custom">Apex Tech</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-outline-primary btn-sm px-4 rounded-pill mt-2 mt-lg-0" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <div class="bg-primary-custom text-white py-5 mb-5">
+        <div class="container text-center py-3">
+            <h1 class="display-4 fw-bold">Explore Our Courses</h1>
+            <p class="lead mb-0">Acquire job-ready technical skills with modern, project-based certifications</p>
+        </div>
+    </div>
+
+    <!-- COURSES SECTION -->
+    <section class="mb-5">
+        <div class="container">
+            <!-- Search & Filter Controls -->
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="input-group shadow-sm">
+                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-search"></i></span>
+                        <input type="text" id="courseSearch" class="form-control border-start-0 ps-1" placeholder="Search courses by name..." onkeyup="filterCourses()">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="row g-4" id="coursesGrid">
+                <!-- Course 1: Web Development -->
+                <div class="col-md-6 col-lg-4 course-card-col" data-course-name="web development">
+                    <div class="card h-100 card-hover shadow-sm border-0">
+                        <img src="assets/course_web_dev.png" class="card-img-top" alt="Web Development Course" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h4 class="card-title fw-bold">Web Development</h4>
+                            <p class="text-muted flex-grow-1">Learn to build responsive and interactive websites from front-end to backend.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-opacity-10 border rounded-pill px-3 py-2 text-primary-custom" style="background-color: rgba(79, 70, 229, 0.1); border-color: rgba(79, 70, 229, 0.2);"><i class="bi bi-clock me-1"></i> 12 Weeks</span>
+                                <span class="fw-bold text-dark fs-5">$499</span>
+                            </div>
+                            <div class="row g-2 mt-auto">
+                                <div class="col-6">
+                                    <button class="btn btn-outline-primary w-100 py-2 rounded-3" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#courseDetailsModal"
+                                            data-course-code="web-dev"
+                                            data-course-title="Web Development"
+                                            data-course-duration="12 Weeks"
+                                            data-course-fee="$499"
+                                            data-course-img="assets/course_web_dev.png"
+                                            data-course-description="Master the art of building modern, responsive, and interactive websites. Learn front-end and back-end technologies including HTML5, CSS3, JavaScript, React, Node.js, and Express."
+                                            data-course-syllabus="HTML5 & CSS3 Essentials, JavaScript ES6+, Front-end Frameworks (React), Backend Development with Node/Express, Database Integration (MongoDB), Deployment & Git">
+                                        Details
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="register.html?course=web-dev" class="btn btn-primary-custom w-100 py-2 rounded-3">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2: Python Programming -->
+                <div class="col-md-6 col-lg-4 course-card-col" data-course-name="python programming">
+                    <div class="card h-100 card-hover shadow-sm border-0">
+                        <img src="assets/course_python.png" class="card-img-top" alt="Python Programming Course" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h4 class="card-title fw-bold">Python Programming</h4>
+                            <p class="text-muted flex-grow-1">Master Python core syntax, algorithms, data structures, and object-oriented paradigms.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-opacity-10 border rounded-pill px-3 py-2 text-primary-custom" style="background-color: rgba(79, 70, 229, 0.1); border-color: rgba(79, 70, 229, 0.2);"><i class="bi bi-clock me-1"></i> 8 Weeks</span>
+                                <span class="fw-bold text-dark fs-5">$399</span>
+                            </div>
+                            <div class="row g-2 mt-auto">
+                                <div class="col-6">
+                                    <button class="btn btn-outline-primary w-100 py-2 rounded-3" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#courseDetailsModal"
+                                            data-course-code="python"
+                                            data-course-title="Python Programming"
+                                            data-course-duration="8 Weeks"
+                                            data-course-fee="$399"
+                                            data-course-img="assets/course_python.png"
+                                            data-course-description="Go from beginner to advanced in Python. Learn programming fundamentals, object-oriented principles, file handling, and write clean, pythonic code."
+                                            data-course-syllabus="Python Syntax & Basics, Data Structures & Algorithms, Object-Oriented Programming, File Handling & Modules, Web Scraping with BeautifulSoup, Introduction to Flask">
+                                        Details
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="register.html?course=python" class="btn btn-primary-custom w-100 py-2 rounded-3">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3: Data Science -->
+                <div class="col-md-6 col-lg-4 course-card-col" data-course-name="data science">
+                    <div class="card h-100 card-hover shadow-sm border-0">
+                        <img src="assets/course_data_science.png" class="card-img-top" alt="Data Science Course" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h4 class="card-title fw-bold">Data Science</h4>
+                            <p class="text-muted flex-grow-1">Dive into data analysis, statistical modeling, machine learning concepts, and visual metrics.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-opacity-10 border rounded-pill px-3 py-2 text-primary-custom" style="background-color: rgba(79, 70, 229, 0.1); border-color: rgba(79, 70, 229, 0.2);"><i class="bi bi-clock me-1"></i> 16 Weeks</span>
+                                <span class="fw-bold text-dark fs-5">$699</span>
+                            </div>
+                            <div class="row g-2 mt-auto">
+                                <div class="col-6">
+                                    <button class="btn btn-outline-primary w-100 py-2 rounded-3" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#courseDetailsModal"
+                                            data-course-code="data-science"
+                                            data-course-title="Data Science"
+                                            data-course-duration="16 Weeks"
+                                            data-course-fee="$699"
+                                            data-course-img="assets/course_data_science.png"
+                                            data-course-description="Uncover insights from data. Learn statistics, data analysis, data visualization, and data manipulation tools like Pandas, NumPy, and Matplotlib."
+                                            data-course-syllabus="Probability & Statistics, Data Wrangling with Pandas/NumPy, Data Visualization (Matplotlib & Seaborn), SQL for Data Science, Machine Learning Foundations, Capstone Project">
+                                        Details
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="register.html?course=data-science" class="btn btn-primary-custom w-100 py-2 rounded-3">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4: AI & Machine Learning -->
+                <div class="col-md-6 col-lg-4 course-card-col" data-course-name="ai machine learning ml artificial intelligence">
+                    <div class="card h-100 card-hover shadow-sm border-0">
+                        <img src="assets/course_ai_ml.png" class="card-img-top" alt="AI & ML Course" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h4 class="card-title fw-bold">AI & Machine Learning</h4>
+                            <p class="text-muted flex-grow-1">Learn deep neural networks, computer vision, NLP, and train models using PyTorch/TensorFlow.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-opacity-10 border rounded-pill px-3 py-2 text-primary-custom" style="background-color: rgba(79, 70, 229, 0.1); border-color: rgba(79, 70, 229, 0.2);"><i class="bi bi-clock me-1"></i> 20 Weeks</span>
+                                <span class="fw-bold text-dark fs-5">$899</span>
+                            </div>
+                            <div class="row g-2 mt-auto">
+                                <div class="col-6">
+                                    <button class="btn btn-outline-primary w-100 py-2 rounded-3" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#courseDetailsModal"
+                                            data-course-code="ai-ml"
+                                            data-course-title="AI & Machine Learning"
+                                            data-course-duration="20 Weeks"
+                                            data-course-fee="$899"
+                                            data-course-img="assets/course_ai_ml.png"
+                                            data-course-description="Dive deep into neural networks, machine learning algorithms, and deep learning libraries. Build intelligent agents and prediction systems."
+                                            data-course-syllabus="Supervised & Unsupervised Learning, Regression & Classification, Neural Networks & Deep Learning, NLP & Computer Vision, TensorFlow & PyTorch, Ethics in AI">
+                                        Details
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="register.html?course=ai-ml" class="btn btn-primary-custom w-100 py-2 rounded-3">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5: Java Programming -->
+                <div class="col-md-6 col-lg-4 course-card-col" data-course-name="java programming">
+                    <div class="card h-100 card-hover shadow-sm border-0">
+                        <img src="assets/course_java.png" class="card-img-top" alt="Java Programming Course" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h4 class="card-title fw-bold">Java Programming</h4>
+                            <p class="text-muted flex-grow-1">Master enterprise application design, OOP, database integrations, and Spring Boot.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-opacity-10 border rounded-pill px-3 py-2 text-primary-custom" style="background-color: rgba(79, 70, 229, 0.1); border-color: rgba(79, 70, 229, 0.2);"><i class="bi bi-clock me-1"></i> 10 Weeks</span>
+                                <span class="fw-bold text-dark fs-5">$449</span>
+                            </div>
+                            <div class="row g-2 mt-auto">
+                                <div class="col-6">
+                                    <button class="btn btn-outline-primary w-100 py-2 rounded-3" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#courseDetailsModal"
+                                            data-course-code="java"
+                                            data-course-title="Java Programming"
+                                            data-course-duration="10 Weeks"
+                                            data-course-fee="$449"
+                                            data-course-img="assets/course_java.png"
+                                            data-course-description="Master Java, one of the most popular languages for enterprise applications. Learn core concepts, multithreading, collections, and Spring Boot."
+                                            data-course-syllabus="Java Syntax & OOP, Collections Framework, Exception Handling & Files, Multithreading & Concurrency, Database Connectivity (JDBC), Spring Boot Fundamentals">
+                                        Details
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="register.html?course=java" class="btn btn-primary-custom w-100 py-2 rounded-3">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6: Cloud Computing -->
+                <div class="col-md-6 col-lg-4 course-card-col" data-course-name="cloud computing AWS docker kubernetes devops">
+                    <div class="card h-100 card-hover shadow-sm border-0">
+                        <img src="assets/course_cloud.png" class="card-img-top" alt="Cloud Computing Course" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h4 class="card-title fw-bold">Cloud Computing</h4>
+                            <p class="text-muted flex-grow-1">Learn to deploy, monitor, and scale modern architectures using AWS, Docker, and K8s.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-opacity-10 border rounded-pill px-3 py-2 text-primary-custom" style="background-color: rgba(79, 70, 229, 0.1); border-color: rgba(79, 70, 229, 0.2);"><i class="bi bi-clock me-1"></i> 12 Weeks</span>
+                                <span class="fw-bold text-dark fs-5">$599</span>
+                            </div>
+                            <div class="row g-2 mt-auto">
+                                <div class="col-6">
+                                    <button class="btn btn-outline-primary w-100 py-2 rounded-3" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#courseDetailsModal"
+                                            data-course-code="cloud"
+                                            data-course-title="Cloud Computing"
+                                            data-course-duration="12 Weeks"
+                                            data-course-fee="$599"
+                                            data-course-img="assets/course_cloud.png"
+                                            data-course-description="Learn how to deploy, manage, and scale applications in the cloud. Master key concepts of AWS, Azure, and Google Cloud, containerization, and DevOps."
+                                            data-course-syllabus="Cloud Architecture Principles, Amazon Web Services (AWS) Core Services, Containerization with Docker, Orchestration with Kubernetes, CI/CD Pipelines, Cloud Security & IAM">
+                                        Details
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="register.html?course=cloud" class="btn btn-primary-custom w-100 py-2 rounded-3">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Search Results Message -->
+            <div id="noCoursesMessage" class="text-center py-5 d-none">
+                <i class="bi bi-exclamation-circle fs-1 text-muted mb-3 d-block"></i>
+                <h5 class="fw-bold text-secondary">No courses found matching your query</h5>
+                <p class="text-muted">Try using alternative keywords or clear the search input.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3">Apex Tech Institute</h5>
+                    <p class="small text-secondary">Providing state-of-the-art education to empower students for successful careers in tech. Start learning today!</p>
+                </div>
+                <div class="col-sm-6 col-lg-2 offset-lg-1">
+                    <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="courses.html">Courses</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">Our Courses</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="courses.html">Web Development</a></li>
+                        <li class="mb-2"><a href="courses.html">Data Science</a></li>
+                        <li class="mb-2"><a href="courses.html">Cloud Computing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white fw-bold mb-3">Contact Details</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="d-flex mb-2 text-secondary">
+                            <i class="bi bi-geo-alt-fill text-primary-custom me-2"></i>
+                            123 Tech Square, Suite 400, Silicon Valley, CA 94025
+                        </li>
+                        <li class="d-flex mb-2 text-secondary">
+                            <i class="bi bi-telephone-fill text-primary-custom me-2"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="d-flex mb-2 text-secondary">
+                            <i class="bi bi-envelope-fill text-primary-custom me-2"></i>
+                            admissions@apextech.edu
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                <span class="small text-secondary mb-3 mb-sm-0">&copy; 2026 Apex Tech Institute. All rights reserved.</span>
+                <div class="d-flex gap-3">
+                    <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="fs-5"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COURSE DETAILS MODAL -->
+    <div class="modal fade" id="courseDetailsModal" tabindex="-1" aria-labelledby="courseDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-0 bg-light">
+                    <h5 class="modal-title fw-bold" id="courseDetailsModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-lg-5">
+                            <img src="" class="modal-course-img img-fluid w-100" alt="Course Image">
+                            <div class="card bg-light border-0 mt-3 p-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-secondary small">Duration</span>
+                                    <span class="fw-bold modal-duration">N/A</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-secondary small">Course Fee</span>
+                                    <span class="fw-bold text-primary-custom modal-fee">N/A</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <h5 class="fw-bold mb-2">About Course</h5>
+                            <p class="modal-description text-secondary">Course Description goes here...</p>
+                            
+                            <h5 class="fw-bold mt-4 mb-2">What You Will Learn</h5>
+                            <ul class="list-group list-group-flush modal-syllabus bg-transparent">
+                                <!-- Dynamically filled list -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 p-4 pt-0">
+                    <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+                    <a href="register.html" class="btn btn-primary-custom modal-register-btn rounded-pill px-4">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-0 bg-light">
+                    <h5 class="modal-title fw-bold" id="loginModalLabel">Student Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label small fw-semibold">Email address</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white text-muted border-end-0"><i class="bi bi-envelope"></i></span>
+                                <input type="email" class="form-control border-start-0 ps-0" id="loginEmail" placeholder="name@example.com" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label small fw-semibold">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white text-muted border-end-0"><i class="bi bi-lock"></i></span>
+                                <input type="password" class="form-control border-start-0 ps-0" id="loginPassword" placeholder="Enter password" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label small text-secondary" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="small text-decoration-none">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 py-2 rounded-3 mt-3">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- Search Filtering Logic -->
+    <script>
+        function filterCourses() {
+            const query = document.getElementById('courseSearch').value.toLowerCase().trim();
+            const cols = document.querySelectorAll('.course-card-col');
+            const noMessage = document.getElementById('noCoursesMessage');
+            let matchedCount = 0;
+
+            cols.forEach(col => {
+                const name = col.getAttribute('data-course-name');
+                if (name.includes(query)) {
+                    col.classList.remove('d-none');
+                    matchedCount++;
+                } else {
+                    col.classList.add('d-none');
+                }
+            });
+
+            if (matchedCount === 0) {
+                noMessage.classList.remove('d-none');
+            } else {
+                noMessage.classList.add('d-none');
+            }
+        }
+    </script>
+</body>
+</html>

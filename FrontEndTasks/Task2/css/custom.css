@@ -1,0 +1,101 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #334155;
+    background-color: #f8fafc;
+}
+
+/* Custom Primary Color Accent Details */
+.text-primary-custom {
+    color: #4f46e5;
+}
+
+.bg-primary-custom {
+    background-color: #4f46e5;
+}
+
+.btn-primary-custom {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary-custom:hover, 
+.btn-primary-custom:focus {
+    background-color: #4338ca;
+    border-color: #4338ca;
+    color: #ffffff;
+}
+
+/* Navbar Enhancements */
+.navbar {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Card Micro-Animations */
+.card-hover {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.12);
+}
+
+/* Faculty and Testimonial Cards */
+.testimonial-card {
+    border-left: 4px solid #4f46e5 !important;
+}
+
+.avatar-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e8f0;
+}
+
+/* Google Map Placeholder */
+.map-placeholder {
+    height: 350px;
+    background-color: #f1f5f9;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.map-placeholder:hover {
+    background-color: #e2e8f0;
+}
+
+/* Footer details */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+}
+
+footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #38bdf8;
+}
+
+/* Course details modal image styling */
+.modal-course-img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}

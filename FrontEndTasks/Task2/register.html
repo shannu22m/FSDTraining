@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Tech Institute - Course Registration</title>
+    <meta name="description" content="Register online for training courses in Web Development, Python, Data Science, AI & ML, Java, and Cloud Computing at Apex Tech Institute.">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/logo.png" alt="Apex Tech Institute Logo" height="40" class="me-2 rounded">
+                <span class="text-primary-custom">Apex Tech</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-outline-primary btn-sm px-4 rounded-pill mt-2 mt-lg-0" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <div class="bg-primary-custom text-white py-5 mb-5">
+        <div class="container text-center py-3">
+            <h1 class="display-4 fw-bold">Online Course Registration</h1>
+            <p class="lead mb-0">Fill out the form below to enroll and secure your seat today</p>
+        </div>
+    </div>
+
+    <!-- MAIN FORM CONTAINER -->
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Success Alert Placeholder -->
+                <div id="alertPlaceholder" class="mb-4"></div>
+
+                <!-- Form Card -->
+                <div class="card border-0 shadow-sm p-4 p-md-5 bg-white rounded-3">
+                    <form id="registrationForm" class="needs-validation" novalidate>
+                        
+                        <h4 class="fw-bold mb-4 text-primary-custom pb-2 border-bottom"><i class="bi bi-person-badge-fill me-2"></i>Personal Details</h4>
+                        
+                        <!-- Name & Email -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="studentName" class="form-label small fw-semibold">Student Full Name *</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-muted"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control" id="studentName" placeholder="John Doe" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="studentEmail" class="form-label small fw-semibold">Email Address *</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-muted"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control" id="studentEmail" placeholder="johndoe@example.com" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile & Gender -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="mobileNumber" class="form-label small fw-semibold">Mobile Number *</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-muted"><i class="bi bi-telephone"></i></span>
+                                    <input type="tel" class="form-control" id="mobileNumber" placeholder="9876543210" pattern="[0-9]{10}" required>
+                                    <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold d-block">Gender *</label>
+                                <div class="pt-2">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderRadio" id="genderMale" value="Male" required>
+                                        <label class="form-check-label text-secondary" for="genderMale">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderRadio" id="genderFemale" value="Female">
+                                        <label class="form-check-label text-secondary" for="genderFemale">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderRadio" id="genderOther" value="Other">
+                                        <label class="form-check-label text-secondary" for="genderOther">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="fw-bold my-4 text-primary-custom pb-2 border-bottom"><i class="bi bi-journal-bookmark-fill me-2"></i>Academic Details</h4>
+
+                        <!-- Course Selection & Qualification -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="courseSelection" class="form-label small fw-semibold">Select Course *</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-muted"><i class="bi bi-book"></i></span>
+                                    <select class="form-select" id="courseSelection" required>
+                                        <option value="" disabled selected>Choose a course...</option>
+                                        <option value="web-dev">Web Development</option>
+                                        <option value="python">Python Programming</option>
+                                        <option value="data-science">Data Science</option>
+                                        <option value="ai-ml">AI & Machine Learning</option>
+                                        <option value="java">Java Programming</option>
+                                        <option value="cloud">Cloud Computing</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please choose a course.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="qualification" class="form-label small fw-semibold">Highest Qualification *</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-muted"><i class="bi bi-mortarboard"></i></span>
+                                    <select class="form-select" id="qualification" required>
+                                        <option value="" disabled selected>Choose qualification...</option>
+                                        <option value="High School">High School</option>
+                                        <option value="Undergraduate">Undergraduate Degree</option>
+                                        <option value="Postgraduate">Postgraduate Degree</option>
+                                        <option value="Working Professional">Working Professional</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select your highest qualification.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="mb-3">
+                            <label for="addressInput" class="form-label small fw-semibold">Permanent Address *</label>
+                            <textarea class="form-control" id="addressInput" rows="3" placeholder="Enter your full address here..." required></textarea>
+                            <div class="invalid-feedback">Please enter your address.</div>
+                        </div>
+
+                        <!-- Upload Resume -->
+                        <div class="mb-4">
+                            <label for="resumeUpload" class="form-label small fw-semibold">Upload Resume (PDF, DOCX) *</label>
+                            <input type="file" class="form-control" id="resumeUpload" accept=".pdf,.docx,.doc" required>
+                            <div class="invalid-feedback">Please upload your resume.</div>
+                        </div>
+
+                        <!-- Terms & Conditions -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                            <label class="form-check-label text-secondary small" for="termsCheck">
+                                I agree to the terms and conditions and understand that my information is securely handled. *
+                            </label>
+                            <div class="invalid-feedback">You must agree to the terms before submitting.</div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary-custom btn-lg w-100 py-3 rounded-3 mt-2"><i class="bi bi-send-check me-2"></i>Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3">Apex Tech Institute</h5>
+                    <p class="small text-secondary">Providing state-of-the-art education to empower students for successful careers in tech. Start learning today!</p>
+                </div>
+                <div class="col-sm-6 col-lg-2 offset-lg-1">
+                    <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="courses.html">Courses</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">Our Courses</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="courses.html">Web Development</a></li>
+                        <li class="mb-2"><a href="courses.html">Data Science</a></li>
+                        <li class="mb-2"><a href="courses.html">Cloud Computing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white fw-bold mb-3">Contact Details</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="d-flex mb-2 text-secondary">
+                            <i class="bi bi-geo-alt-fill text-primary-custom me-2"></i>
+                            123 Tech Square, Suite 400, Silicon Valley, CA 94025
+                        </li>
+                        <li class="d-flex mb-2 text-secondary">
+                            <i class="bi bi-telephone-fill text-primary-custom me-2"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="d-flex mb-2 text-secondary">
+                            <i class="bi bi-envelope-fill text-primary-custom me-2"></i>
+                            admissions@apextech.edu
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                <span class="small text-secondary mb-3 mb-sm-0">&copy; 2026 Apex Tech Institute. All rights reserved.</span>
+                <div class="d-flex gap-3">
+                    <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="fs-5"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-0 bg-light">
+                    <h5 class="modal-title fw-bold" id="loginModalLabel">Student Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label small fw-semibold">Email address</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white text-muted border-end-0"><i class="bi bi-envelope"></i></span>
+                                <input type="email" class="form-control border-start-0 ps-0" id="loginEmail" placeholder="name@example.com" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label small fw-semibold">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white text-muted border-end-0"><i class="bi bi-lock"></i></span>
+                                <input type="password" class="form-control border-start-0 ps-0" id="loginPassword" placeholder="Enter password" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label small text-secondary" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="small text-decoration-none">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 py-2 rounded-3 mt-3">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
