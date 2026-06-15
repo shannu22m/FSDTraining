@@ -31,4 +31,5 @@ fetchUserName(1)
     }).then((output)=>console.log(output))
 
 
-
+arr=[1,2,3,4,5]
+arr.map((ele)=>console.log(ele))

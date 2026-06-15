@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        #joke{
+            height: 30px;
+            width: auto;
+            margin:10px;
+            border: 2px solid black;
+        }
+        button{
+            margin: 10px;
+            width: 100%;
+        }
+    </style>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div id="joke"></div>
+    <button onclick="getJoke()">Get Joke</button>
+</body>
+</html>

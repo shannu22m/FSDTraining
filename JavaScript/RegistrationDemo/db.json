@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "username": "shannu",
+      "email": "sai@gmail.com",
+      "password": "123",
+      "cpassword": "123",
+      "id": "RwiD1-5WiQs"
+    },
+    {
+      "username": "shanmukha",
+      "email": "sai1@gmail.com",
+      "password": "123",
+      "cpassword": "123",
+      "id": "2ZgruA06Oz0"
+    },
+
+    {
+      "username": "shanmukha",
+      "email": "sai1@gmail.com",
+      "password": "123",
+      "cpassword": "123",
+      "id": "I9Gv7uS5ze0"
+    }
+  ],
+  "students": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
